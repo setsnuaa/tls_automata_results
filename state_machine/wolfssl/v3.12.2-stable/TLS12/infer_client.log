@@ -1,0 +1,10 @@
+input_letters ['TLS12ServerHello', 'TLS12CertificateRequest', 'TLS12Certificate_valid', 'TLS12Certificate_invalid', 'TLS12Certificate_untrusted', 'TLS12EmptyCertificate', 'TLS12ServerKeyExchange', 'TLS12ServerHelloDone', 'TLSChangeCipherSpec', 'TLSFinished', 'TLSApplicationData', 'TLSCloseNotify']
+eqtests: BDist(3)
+timeout: 1.0
+
+time spent in lstar.learn(): 257.83604431152344
+n_states: 19
+n_queries=794484
+n_submitted_queries=396431
+n_letters=4727760
+n_submitted_letters=3141471

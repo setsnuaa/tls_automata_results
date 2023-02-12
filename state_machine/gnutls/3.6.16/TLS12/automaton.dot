@@ -1,0 +1,37 @@
+digraph {
+"0" [shape=doubleoctagon label=0];
+"1" [shape=ellipse label=1];
+"2" [shape=ellipse label=2];
+"3" [shape=ellipse label=3];
+"4" [shape=ellipse label=4];
+"5" [shape=ellipse label=5];
+"6" [shape=ellipse label=6];
+"7" [shape=ellipse label=7];
+"8" [shape=rectangle label=8];
+"0" -> "8" [label="TLS12CertificateRequest-TLS12Certificate_invalid-TLS12Certificate_untrusted-TLS12Certificate_valid-TLS12EmptyCertificate-TLS12ServerHelloDone-TLS12ServerKeyExchange-TLSApplicationData-TLSChangeCipherSpec-TLSFinished / FatalAlert(unexpected_message)"];
+"0" -> "1" [label="TLS12ServerHello / No RSP"];
+"0" -> "8" [label="TLSCloseNotify / FatalAlert(internal_error)"];
+"1" -> "8" [label="TLS12CertificateRequest-TLS12ServerHello-TLS12ServerHelloDone-TLS12ServerKeyExchange-TLSApplicationData-TLSChangeCipherSpec-TLSFinished / FatalAlert(unexpected_message)"];
+"1" -> "8" [label="TLS12Certificate_invalid-TLS12Certificate_untrusted / FatalAlert(bad_certificate)"];
+"1" -> "2" [label="TLS12Certificate_valid / No RSP"];
+"1" -> "8" [label="TLS12EmptyCertificate / FatalAlert(decode_error)"];
+"1" -> "8" [label="TLSCloseNotify / FatalAlert(internal_error)"];
+"2" -> "8" [label="TLS12CertificateRequest-TLS12Certificate_invalid-TLS12Certificate_untrusted-TLS12Certificate_valid-TLS12EmptyCertificate-TLS12ServerHello-TLS12ServerHelloDone-TLSApplicationData-TLSChangeCipherSpec-TLSFinished / FatalAlert(unexpected_message)"];
+"2" -> "3" [label="TLS12ServerKeyExchange / No RSP"];
+"2" -> "8" [label="TLSCloseNotify / FatalAlert(internal_error)"];
+"3" -> "4" [label="TLS12CertificateRequest / No RSP"];
+"3" -> "8" [label="TLS12Certificate_invalid-TLS12Certificate_untrusted-TLS12Certificate_valid-TLS12EmptyCertificate-TLS12ServerHello-TLS12ServerKeyExchange-TLSApplicationData-TLSChangeCipherSpec-TLSFinished / FatalAlert(unexpected_message)"];
+"3" -> "5" [label="TLS12ServerHelloDone / TLSClientKeyExchange+TLSChangeCipherSpec+TLSFinished"];
+"3" -> "8" [label="TLSCloseNotify / FatalAlert(internal_error)"];
+"4" -> "8" [label="TLS12CertificateRequest-TLS12Certificate_invalid-TLS12Certificate_untrusted-TLS12Certificate_valid-TLS12EmptyCertificate-TLS12ServerHello-TLS12ServerKeyExchange-TLSApplicationData-TLSChangeCipherSpec-TLSFinished / FatalAlert(unexpected_message)"];
+"4" -> "5" [label="TLS12ServerHelloDone / TLSCertificate+TLSClientKeyExchange+TLSChangeCipherSpec+TLSFinished"];
+"4" -> "8" [label="TLSCloseNotify / FatalAlert(internal_error)"];
+"5" -> "8" [label="TLS12CertificateRequest-TLS12Certificate_invalid-TLS12Certificate_untrusted-TLS12Certificate_valid-TLS12EmptyCertificate-TLS12ServerHello-TLS12ServerHelloDone-TLS12ServerKeyExchange-TLSApplicationData-TLSCloseNotify-TLSFinished / FatalAlert(unexpected_message)"];
+"5" -> "6" [label="TLSChangeCipherSpec / No RSP"];
+"6" -> "8" [label="TLS12CertificateRequest-TLS12Certificate_invalid-TLS12Certificate_untrusted-TLS12Certificate_valid-TLS12EmptyCertificate-TLS12ServerHello-TLS12ServerHelloDone-TLS12ServerKeyExchange-TLSApplicationData-TLSChangeCipherSpec / FatalAlert(unexpected_message)"];
+"6" -> "8" [label="TLSCloseNotify / FatalAlert(internal_error)"];
+"6" -> "7" [label="TLSFinished / Warning(close_notify)"];
+"7" -> "8" [label="TLS12CertificateRequest-TLS12Certificate_invalid-TLS12Certificate_untrusted-TLS12Certificate_valid-TLS12EmptyCertificate-TLS12ServerHello-TLS12ServerHelloDone-TLS12ServerKeyExchange-TLSChangeCipherSpec-TLSCloseNotify-TLSFinished / EOF"];
+"7" -> "7" [label="TLSApplicationData / No RSP"];
+"8" -> "8" [label="TLS12CertificateRequest-TLS12Certificate_invalid-TLS12Certificate_untrusted-TLS12Certificate_valid-TLS12EmptyCertificate-TLS12ServerHello-TLS12ServerHelloDone-TLS12ServerKeyExchange-TLSApplicationData-TLSChangeCipherSpec-TLSCloseNotify-TLSFinished / EOF"];
+}

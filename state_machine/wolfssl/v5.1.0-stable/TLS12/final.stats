@@ -1,0 +1,7 @@
+Inference converged
+  耗时: 223.78057861328125
+  n_states: 16
+  n_queries=669636
+  n_submitted_queries=334079
+  n_letters=3799920
+  n_submitted_letters=2455743

@@ -1,0 +1,4 @@
+digraph {
+"0" [shape=doubleoctagon label=0];
+"0" -> "0" [label="NoRenegotiation-TLS13CertificateRequest-TLS13CertificateVerify-TLS13Certificate_invalid-TLS13Certificate_untrusted-TLS13Certificate_valid-TLS13EmptyCertificate-TLS13EncryptedExtensions-TLS13InvalidCertificateVerify-TLS13SH_WITH_00_RandBytes-TLS13ServerHello-TLSApplicationData-TLSApplicationDataEmpty-TLSChangeCipherSpec-TLSCloseNotify-TLSFinished / NO_CONNECTION"];
+}

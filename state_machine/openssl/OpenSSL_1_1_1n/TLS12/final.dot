@@ -1,0 +1,35 @@
+digraph {
+"0" [shape=doubleoctagon label=0];
+"1" [shape=ellipse label=1];
+"2" [shape=ellipse label=2];
+"3" [shape=ellipse label=3];
+"4" [shape=ellipse label=4];
+"5" [shape=ellipse label=5];
+"6" [shape=ellipse label=6];
+"7" [shape=rectangle label=7];
+"0" -> "7" [label="Close / -"];
+"0" -> "1" [label="SH / -", color="green", fontcolor="green"];
+"0" -> "7" [label="* / UnexpectedMsg", color="grey", fontcolor="grey"];
+"1" -> "2" [label="Cert / -", color="green", fontcolor="green"];
+"1" -> "2" [label="Cert_invalid-Cert_untrusted / -"];
+"1" -> "7" [label="Close / -"];
+"1" -> "7" [label="EmptyCert / DecodeError", color="grey", fontcolor="grey"];
+"1" -> "7" [label="* / UnexpectedMsg", color="grey", fontcolor="grey"];
+"2" -> "7" [label="Close / -"];
+"2" -> "3" [label="SKE / -", color="green", fontcolor="green"];
+"2" -> "7" [label="* / UnexpectedMsg", color="grey", fontcolor="grey"];
+"3" -> "4" [label="CR / -", color="green", fontcolor="green"];
+"3" -> "7" [label="Close / -"];
+"3" -> "5" [label="SHD / CKE+CCS+Fin", color="green", fontcolor="green"];
+"3" -> "7" [label="* / UnexpectedMsg", color="grey", fontcolor="grey"];
+"4" -> "7" [label="Close / -"];
+"4" -> "5" [label="SHD / Cert+CKE+CCS+Fin", color="green", fontcolor="green"];
+"4" -> "7" [label="* / UnexpectedMsg", color="grey", fontcolor="grey"];
+"5" -> "6" [label="CCS / -", color="green", fontcolor="green"];
+"5" -> "7" [label="Close / -"];
+"5" -> "7" [label="* / UnexpectedMsg", color="grey", fontcolor="grey"];
+"6" -> "7" [label="Fin / Close", color="green", fontcolor="green"];
+"6" -> "7" [label="* / UnexpectedMsg", color="grey", fontcolor="grey"];
+"7" -> "7" [label="AppData / EOF", color="green", fontcolor="green"];
+"7" -> "7" [label="* / EOF", color="grey", fontcolor="grey"];
+}

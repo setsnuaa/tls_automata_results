@@ -1,0 +1,10 @@
+input_letters ['TLS13ServerHello', 'TLS13SH_WITH_00_RandBytes', 'TLSChangeCipherSpec', 'TLS13EncryptedExtensions', 'TLS13CertificateRequest', 'TLS13Certificate_valid', 'TLS13Certificate_invalid', 'TLS13Certificate_untrusted', 'TLS13EmptyCertificate', 'TLS13CertificateVerify', 'TLS13InvalidCertificateVerify', 'TLSFinished', 'TLSApplicationData', 'TLSApplicationDataEmpty', 'TLSCloseNotify', 'NoRenegotiation']
+eqtests: BDist(3)
+timeout: 1.0
+
+time spent in lstar.learn(): 798.7367978096008
+n_states: 11
+n_queries=1454110
+n_submitted_queries=727722
+n_letters=7879148
+n_submitted_letters=4943726

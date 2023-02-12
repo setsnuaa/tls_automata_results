@@ -1,0 +1,4 @@
+digraph {
+"0" [shape=doubleoctagon label=0];
+"0" -> "0" [label="TLS12CertificateRequest-TLS12Certificate_invalid-TLS12Certificate_untrusted-TLS12Certificate_valid-TLS12EmptyCertificate-TLS12ServerHello-TLS12ServerHelloDone-TLS12ServerKeyExchange-TLSApplicationData-TLSChangeCipherSpec-TLSCloseNotify-TLSFinished / NO_CONNECTION"];
+}

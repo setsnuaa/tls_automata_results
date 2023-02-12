@@ -1,0 +1,7 @@
+发现反例: OutputQuery(I = [Letter('TLS13ServerHello'), Letter('TLS13EncryptedExtensions'), Letter('TLS13CertificateRequest'), Letter('TLS13Certificate_invalid'), Letter('TLS13CertificateVerify'), Letter('TLSFinished'), Letter('TLSApplicationData')], O = [Letter('No RSP'), Letter('No RSP'), Letter('No RSP'), Letter('No RSP'), Letter('No RSP'), Letter('TLS13Certificate+TLSCertificateVerify+TLSFinished+TLSApplicationData'), Letter('Warning(close_notify)')])
+  耗时: 408.67429876327515
+  n_states: 10
+  n_queries=2729
+  n_submitted_queries=2585
+  n_letters=11601
+  n_submitted_letters=11089
